@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Ammar Al-Keemyawee</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body class="Background">   
+
+    <!-- Navbar -->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+    </div>
+
+    <!-- Background video -->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="https://cdn.pixabay.com/video/2021/10/18/92480-637690589_tiny.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Video text -->
+    <div class="Video_Text">
+        <h1 class="white-text">Ammar Al-Keemyawee's Portfolio</h1>
+        <strong>
+            <p class="center quote">
+                <q>Code is like poetry — every line speaks a purpose, every block tells a story.
+                <br>As a student of technology, I see programming not just as logic, but as art.</q>
+                <br>– Ammar Al-Keemyawee<br><br>
+                Hello! I'm Ammar, a curious learner and aspiring developer. This portfolio is a glimpse into my educational journey and the projects that shaped my learning.
+                <br><br>
+                Thanks for stopping by — feel free to explore!
+            </p>
+        </strong>
+    </div>
+
+    <!-- Slideshow -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background"> 
+            <div id="Slideshow_Container">
+                <!-- Slides -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2016/11/22/21/26/notebook-1850613_1280.jpg">
+                    <div class="text">I’m passionate about teamwork and collaborative development!</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png"> 
+                    <div class="text">Proficient in HTML, CSS, and JavaScript</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2015/05/31/15/14/woman-792162_1280.jpg">
+                    <div class="text">Learning Python and enjoying every challenge</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2015/12/09/15/51/code-1084923_1280.png">
+                    <div class="text">Exploring backend technologies like C# and .NET</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2015/01/08/18/26/man-593333_1280.jpg"> 
+                    <div class="text">Strong interest in databases and SQL management</div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="https://cdn.pixabay.com/photo/2015/01/08/18/26/man-593333_1280.jpg"> 
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Reach out and connect with me!</a></div> 
+                </div>
+                <!-- Navigation -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="Row" id="About">
+        <div class="Column_2">
+            <img src="https://cdn.pixabay.com/photo/2016/11/22/21/26/notebook-1850613_1280.jpg" alt="Laptop">
+        </div>
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                My name is Ammar Al-Keemyawee, a student with a passion for software development and continuous learning.
+                <br><br>
+                I'm actively enhancing my knowledge in full-stack web technologies through hands-on projects and online bootcamps like
+                <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>.
+                <br><br>
+                Technologies I've studied include HTML, CSS, JavaScript, Python, SQL, and C#. I'm motivated by the thrill of solving problems and building useful applications.
+                <br><br>
+                <a onclick="openForm()" class="contact">Let’s get in touch!</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- GitHub -->
+    <div class="Row" id="GitHub">
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>Explore some of my personal and academic projects here:</p>
+            <p class="center"><a href="https://github.com/Ammar-AlKeemyawee" target="_blank">My GitHub</a></p>
+        </div>
+        <div class="Column_2">
+            <a href="https://github.com/Ammar-AlKeemyawee" target="_blank">
+                <img src="https://cdn.pixabay.com/photo/2021/09/23/06/59/github-6648895_1280.jpg" alt="GitHub Logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm" ondblclick="closeForm()">
+            <form action="" method="POST" class="form-container">
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                <input type="text" placeholder="Type your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>		
+                <input type="text" placeholder="Type your email address here" name="email" required>
+                <label for="message"><b>Message</b></label>
+                <input type="text" placeholder="Type your message here" name="message">
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="center">&copy; Ammar Al-Keemyawee, <a href="https://github.com/Ammar-AlKeemyawee" target="_blank">My GitHub</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
